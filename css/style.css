@@ -1526,3 +1526,129 @@ textarea:focus {
         font-size: 1.25rem;
     }
 }
+
+/* ================================
+   Vertical Slider Animation
+   ================================ */
+.vertical-slider-track {
+    animation: slideUp 35s linear infinite;
+}
+
+.vertical-slider-track-reverse {
+    animation: slideUp 45s linear infinite;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+/* ================================
+   Typewriter Animation
+   ================================ */
+.typewriter-container {
+    display: inline-block;
+}
+
+.typewriter-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-left: 4px solid #d97706;
+    /* Cursor color */
+    width: 0;
+    /* 14 steps for "الرحيق المختوم" (14 chars) */
+    animation:
+        typing 3.5s steps(14, end) infinite,
+        blink-caret 0.75s step-end infinite;
+    padding-left: 5px;
+    /* Space for cursor */
+    direction: rtl;
+    /* Ensure RTL direction */
+}
+
+/* RTL Support for Typewriter */
+html[dir="rtl"] .typewriter-text {
+    border-left: 4px solid #d97706;
+    border-right: none;
+}
+
+/* LTR Support for Typewriter (English) */
+html[lang="en"] .typewriter-text {
+    direction: ltr;
+    border-left: none;
+    border-right: 4px solid #d97706;
+    left: 0;
+    right: auto;
+    /* 20 steps for "Al-Raheeq Al-Makhtum" (20 chars) */
+    animation:
+        typing-en 3.5s steps(20, end) infinite,
+        blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing-en {
+    0% {
+        width: 0;
+    }
+
+    30% {
+        width: 100%;
+    }
+
+    /* Type */
+    80% {
+        width: 100%;
+    }
+
+    /* Pause */
+    90% {
+        width: 0;
+    }
+
+    /* Delete fast */
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    30% {
+        width: 100%;
+    }
+
+    /* Type */
+    80% {
+        width: 100%;
+    }
+
+    /* Pause */
+    90% {
+        width: 0;
+    }
+
+    /* Delete fast */
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #d97706
+    }
+}
