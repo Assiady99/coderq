@@ -761,7 +761,7 @@ const translations = {
             call_us: 'Call Us',
             email_us: 'Email Address',
             location: 'Our Location',
-            address: 'Sanaa - Yemen<br>Zubairi Street - Opposite Central Market',
+            address: 'Sanaa - Yemen<br>60 Street - Opposite Central Market',
             hours: 'Working Hours',
             work_days: 'Saturday - Thursday: 8 AM - 8 PM',
             friday: 'Friday: Closed'
